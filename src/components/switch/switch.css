@@ -1,0 +1,30 @@
+.switch {
+    display: flex;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: gainsboro;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.75rem;
+    border: 2px solid darkgray;
+    box-sizing: border-box;
+}
+.switch::after {
+    content: "ON";
+    display: block;
+    width: calc(2rem - 4px);
+    height: calc(2rem - 4px);
+    border-radius: 1rem;
+    background-color: darkolivegreen;
+    text-align: center;
+    line-height: calc(2rem - 4px);
+    color: white;
+}
+.switch.off {
+    justify-content: flex-end;
+}
+.switch.off::after {
+    content: "OFF";
+    background-color: darkgrey;
+}
